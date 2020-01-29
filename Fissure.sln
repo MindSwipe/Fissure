@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29509.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fissure.Ecs", "Fissure.Ecs\Fissure.Ecs.csproj", "{82503B91-637F-47B5-8861-B5C988E04811}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fissure.Example", "Fissure.Example\Fissure.Example.csproj", "{19FC20F9-0C2A-48D0-9F17-3F7CDA1221B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{82503B91-637F-47B5-8861-B5C988E04811}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82503B91-637F-47B5-8861-B5C988E04811}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82503B91-637F-47B5-8861-B5C988E04811}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82503B91-637F-47B5-8861-B5C988E04811}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19FC20F9-0C2A-48D0-9F17-3F7CDA1221B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19FC20F9-0C2A-48D0-9F17-3F7CDA1221B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19FC20F9-0C2A-48D0-9F17-3F7CDA1221B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19FC20F9-0C2A-48D0-9F17-3F7CDA1221B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CB136AD4-9BEC-4BA0-B475-A906E45740F5}
+	EndGlobalSection
+EndGlobal
