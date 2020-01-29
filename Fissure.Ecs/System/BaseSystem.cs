@@ -59,7 +59,8 @@ namespace Fissure.Ecs.System
 
         private void OnContextEntityAdded(FissureEntity addedEntity)
         {
-            if (addedEntity.Components.Any(component => CompatibleComponents.Contains(component.GetType())))
+            if (addedEntity.Components.Select(x => x.GetType()).Intersect(CompatibleComponents).Count() == CompatibleComponents.Count)
+            //if (addedEntity.Components.Any(component => CompatibleComponents.Contains(component.GetType())))
                 _entitiesToActOn.Add(addedEntity);
         }
 
@@ -71,7 +72,9 @@ namespace Fissure.Ecs.System
 
         private void OnContextEntityComponentAdded(FissureEntity changedEntity, BaseComponent addedComponent)
         {
-            if (CompatibleComponents.Contains(addedComponent.GetType()))
+            if (CompatibleComponents.Contains(addedComponent.GetType()) && changedEntity.Components
+                    .Select(x => x.GetType()).Intersect(CompatibleComponents).Count() ==
+                CompatibleComponents.Count)
                 _entitiesToActOn.Add(changedEntity);
         }
 
@@ -79,9 +82,7 @@ namespace Fissure.Ecs.System
         {
             if (CompatibleComponents.Any(x => x == removedComponent.GetType()))
             {
-                CompatibleComponents.Remove(removedComponent.GetType());
-                if (!changedEntity.Components.Any(component => CompatibleComponents.Contains(component.GetType())))
-                    _entitiesToActOn.Remove(changedEntity);
+                _entitiesToActOn.Remove(changedEntity);
             }
         }
 
